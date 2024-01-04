@@ -1,0 +1,50 @@
+#include<stdio.h>
+void main()
+{
+    int n;
+    scanf("%d",&n);
+    printf("%d",fun(n));
+}
+int fun(int n)
+{
+    int r,ans=0;
+    while(n>0)
+        {
+           r=n%10;
+            ans=ans*10+r;
+            n=n/10;
+        } 
+    return ans;
+}
+--------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class main
+{
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        int n;
+        n=z.nextInt();
+        while(n>0)
+        {
+           System.out.print(n%10);
+            n=n/10;
+        } 
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class main
+{
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        int n,r,ans=0;
+        n=z.nextInt();
+        while(n>0)
+        {
+           r=n%10;
+            ans=ans*10+r;
+            n=n/10;
+        } 
+        System.out.print(ans);
+    }
+}

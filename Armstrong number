@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h>
+int fun(int n)
+{
+    int c,sum=0,r;
+    c=floor(log10(n))+1;
+    while(n>0) //take every value
+    {
+        r=n%10;
+        sum=sum+pow(r,c);
+        n=n/10;
+    }
+    return sum;
+}
+int main() {
+     int n;
+    scanf("%d",&n);
+    int ans=fun(n);
+    if(ans==n)
+        printf("Armstrong number");
+    else
+        printf("Not a Armstrong number");
+}
+============================================================================================================================
+
+import java.util.Scanner;
+public class Main { 
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        int n,c=0,sum=0,f,r,t;
+        n=z.nextInt();
+        f=n;
+        t=n;
+        
+        while(n>0) //count
+        {
+            n=n/10;
+            c++;
+        }
+        
+        while(t>0) //take every value
+        {
+            r=t%10;
+            sum=sum+(int)(Math.pow(r,c));
+            t=t/10;
+        }
+        if(sum==f)
+            System.out.println("Armstrong number");
+        else
+            System.out.println("Not Armstrong number");  
+    }
+}
